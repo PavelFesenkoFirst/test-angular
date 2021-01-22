@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+@media all and (max-width: 769px) {
+  body{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+    margin: 0;
+  }
+
+}

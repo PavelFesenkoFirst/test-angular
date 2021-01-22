@@ -1,0 +1,88 @@
+:host{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1 1 60%;
+}
+.my-logo{
+  margin-top: 24px;
+  text-align: center;
+}
+.first-block{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1 1 60%;
+}
+.some-test{
+  width: 90%;
+  margin: 0 20px 20px auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.first-block-title{
+  margin-top: 80px;
+}
+.first-block-title a{
+  font-weight: bold;
+  line-height: 24px;
+  color: red;
+}
+.first-block-title h1{
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 120%;
+  color: #000000;
+}
+.first-block-title p{
+  margin-top: 16px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #323232;
+}
+.pink{
+  position: relative;
+  z-index: 1;
+}
+.pink:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 172, 196, 1);
+  bottom: 10px;
+  left: 0;
+  display: block;
+  z-index: -1;
+}
+
+@media all and (max-width: 769px) {
+  .first-block{
+    width: 100%;
+  }
+  .some-test{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .my-logo{
+    margin-top: 28px;
+    text-align: center;
+  }
+  .first-block-title{
+    margin-top: 40px;
+  }
+  .first-block-title h1{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120%;
+    color: #000000;
+  }
+  .first-block-title p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #323232;
+  }
+}
+

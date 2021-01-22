@@ -1,0 +1,42 @@
+<form class="second-form" [formGroup]="form">
+  <input type="text" placeholder="Company" formControlName="company" class="form-input-email">
+  <div class="validation"
+       *ngIf="form.get('company').invalid && form.get('company').touched">
+    <small class="my-validate-error" *ngIf="form.get('company').errors.required">Поле не может быть пустым</small>
+    <small class="my-validate-error" *ngIf="form.get('company').errors.minlength">Введите минимум 3 символа</small>
+  </div>
+  <input type="text" placeholder="Phone" formControlName="phone" maxlength="13" class="form-input-email">
+  <div class="validation"
+       *ngIf="form.get('phone').invalid && form.get('phone').touched" >
+    <small class="my-validate-error" *ngIf="form.get('phone').errors.required">Поле не может быть пустым</small>
+    <small class="my-validate-error" *ngIf="form.get('phone').errors.maxlength">Введите корректный номер телефона</small>
+  </div>
+  <input type="password" placeholder="Password" formControlName="password" class="form-input-email">
+  <div class="validation"
+       *ngIf="form.get('password').invalid && form.get('password').touched">
+    <small class="my-validate-error" *ngIf="form.get('password').errors.required">Пароль не модет быть пустым</small>
+    <small class="my-validate-error" *ngIf="form.get('password').errors.minlength">
+      Минимальная длинна пароля не меньше {{form.get('password').errors.minlength.requiredLength}} символа.
+    </small>
+  </div>
+  <div class="check-box-form">
+    <input type="checkbox" formControlName="checkbox">Accept  <a class="open-modal" (click)="modal = true"><u class="links">Privacy Statementu</u></a> and
+    <a class="open-modal" (click)="modal = true"><u class="links">Terms & Conditions</u></a>
+  </div>
+  <div class="validation" *ngIf="form.get('checkbox').invalid">
+    <small class="my-validate-error" *ngIf="form.get('checkbox').errors.required">Press Checkbox</small>
+  </div>
+
+  <div class="form-btn">
+      <a href="index.html">Back</a>
+      <button type="submit" class="form-account" (click)="submit()">Create free account</button>
+  </div>
+
+<!--  <button type="submit" [disabled]="form.invalid">Отправить</button>-->
+</form>
+
+<app-modal
+  *ngIf="modal"
+  title="Modal window"
+  (close)="modal = false"
+></app-modal>

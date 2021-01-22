@@ -1,0 +1,49 @@
+:host{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 40%;
+  background: #E5E5E5;
+  background-image: url("../../assets/media/Background.png");
+}
+
+.some-layout{
+}
+.info-content-title p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+.info-content-ul{
+  margin-top: 8px;
+}
+.info-content-ul-li{
+  background: url("../../assets/media/Group 421.png") no-repeat;
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 30px;
+  position: relative;
+  list-style-type: none;
+}
+.info-content-some{
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+.info-content-industry{
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+@media all and (max-width: 769px) {
+  .some-layout{
+    width: 100%;
+    padding: 63px 0 240px 0;
+    margin-bottom: 20px;
+  }
+}

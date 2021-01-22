@@ -1,0 +1,33 @@
+<form class="first-form" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="row-input">
+    <div class="input-container">
+      <input type="text" placeholder="FirstName" formControlName="fname" class="form-input-name">
+      <div class="validation"
+           *ngIf="form.get('fname').invalid && form.get('fname').touched">
+        <small class="my-validate-error" *ngIf="form.get('fname').errors.required">Поле не может быть пустым</small>
+        <small class="my-validate-error" *ngIf="form.get('fname').errors.minlength">Введите минимум 3 символа</small>
+      </div>
+    </div>
+    <div class="input-container">
+      <input type="text" placeholder="FirstName" formControlName="sname" class="form-input-name1">
+      <!--  <pre>{{form.get('password').errors | json}}</pre>-->
+      <div class="validation"
+           *ngIf="form.get('sname').invalid && form.get('sname').touched">
+        <small class="my-validate-error" *ngIf="form.get('sname').errors.required">Поле не может быть пустым</small>
+        <small class="my-validate-error" *ngIf="form.get('sname').errors.minlength">Введите минимум 3 символа</small>
+      </div>
+    </div>
+  </div>
+  <input type="text" placeholder="Email" formControlName="email" class="form-input-email">
+  <div class="validation"
+       *ngIf="form.get('email').invalid && form.get('email').touched">
+    <small class="my-validate-error" *ngIf="form.get('email').errors.required">Поле не может быть пустым</small>
+    <small class="my-validate-error" *ngIf="form.get('email').errors.email">Введите корректный Email</small>
+  </div>
+  <div class="form-btn">
+    <button type="submit" (click)="submit()" class="btn">Next</button>
+  </div>
+
+</form>
+
+
