@@ -26,3 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    
+    - name: test my text
+      run : echo "${{ matrix.node-version }} test text"
