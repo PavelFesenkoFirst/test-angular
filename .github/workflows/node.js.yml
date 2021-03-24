@@ -28,4 +28,4 @@ jobs:
     - run: npm ci
     
     - name: Test text
-    - run: echo ${{ matrix.node-version }} test
+    - run: echo "${{ matrix.node-version }} test"
